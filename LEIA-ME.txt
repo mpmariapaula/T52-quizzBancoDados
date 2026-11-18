@@ -1,0 +1,18 @@
+DESAFIO SQL - QUIZ INTERATIVO
+
+Arquivos:
+- index.html: estrutura da página
+- style.css: visual e responsividade
+- script.js: perguntas, alternativas, correção e pontuação
+
+Como executar:
+1. Extraia a pasta do ZIP.
+2. Abra o arquivo index.html em um navegador atualizado.
+3. Digite o nome e a turma para começar.
+
+O quiz funciona localmente, sem servidor e sem instalação. A fonte visual é carregada do Google Fonts quando há internet; o sistema funciona mesmo sem ela.
+As respostas são corrigidas no navegador. Nenhum dado é enviado para um servidor.
+
+
+Exportação em PDF:
+Na tela de resultado, clique em 'Exportar resultado em PDF'. Na janela de impressão do navegador, escolha 'Salvar como PDF' como destino e salve o arquivo.

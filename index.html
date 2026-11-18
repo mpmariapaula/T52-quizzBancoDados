@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio SQL | Quiz Interativo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-mark">SQL</div>
+      <div>
+        <p class="eyebrow">LABORATÓRIO DE BANCO DE DADOS</p>
+        <h1>Desafio SQL</h1>
+      </div>
+      <div class="top-tag">QUIZ INTERATIVO</div>
+    </header>
+
+    <section class="intro panel" id="intro-screen">
+      <div class="intro-copy">
+        <span class="pill">MISSÃO DE HOJE</span>
+        <h2>Você domina as consultas SQL?</h2>
+        <p>Resolva desafios sobre subconsultas e relacionamentos entre tabelas. Leia o código, pense como desenvolvedor e acumule pontos a cada resposta correta.</p>
+        <div class="topic-list">
+          <span>IN / NOT IN</span><span>EXISTS / NOT EXISTS</span><span>INNER JOIN</span><span>LEFT JOIN</span>
+        </div>
+      </div>
+      <form id="start-form" class="start-card">
+        <label for="student-name">Seu nome</label>
+        <input id="student-name" type="text" placeholder="Digite seu nome" maxlength="70" required>
+        <label for="student-class">Turma</label>
+        <input id="student-class" type="text" placeholder="Ex.: Programador Web">
+        <button class="primary-btn" type="submit">Começar desafio <span>→</span></button>
+        <p class="small-note">14 questões • Alternativas múltiplas • Resultado no final</p>
+      </form>
+    </section>
+
+    <section class="quiz panel hidden" id="quiz-screen">
+      <div class="quiz-meta">
+        <span id="question-counter">QUESTÃO 1 DE 14</span>
+        <span class="score-chip">Pontos: <strong id="live-score">0</strong></span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="question-area">
+        <div class="question-topic" id="question-topic">SUBCONSULTAS</div>
+        <h2 id="question-text"></h2>
+        <pre class="code-block hidden" id="question-code"><code></code></pre>
+        <div class="answers" id="answers"></div>
+        <div class="feedback hidden" id="feedback" aria-live="polite"></div>
+      </div>
+      <div class="quiz-footer">
+        <span class="keyboard-hint">Escolha uma alternativa para continuar.</span>
+        <button class="primary-btn" id="next-btn" disabled>Confirmar resposta <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="results panel hidden" id="results-screen">
+      <div class="result-icon">✓</div>
+      <p class="eyebrow">DESAFIO CONCLUÍDO</p>
+      <h2 id="result-heading">Mandou bem!</h2>
+      <p id="result-summary"></p>
+      <div class="result-stats">
+        <div><strong id="final-score">0</strong><span>PONTOS</span></div>
+        <div><strong id="final-correct">0/14</strong><span>ACERTOS</span></div>
+        <div><strong id="final-percent">0%</strong><span>APROVEITAMENTO</span></div>
+      </div>
+      <div class="result-actions">
+        <button class="primary-btn" id="review-btn">Revisar respostas</button>
+        <button class="secondary-btn" id="export-pdf-btn">Exportar resultado em PDF</button>
+        <button class="secondary-btn" id="restart-btn">Jogar novamente</button>
+      </div>
+      <div class="review-list hidden" id="review-list"></div>
+      <p class="small-note">Dica: revise as explicações das questões que errou e tente novamente.</p>
+    </section>
+
+    <footer><span>DESAFIO SQL</span><span>Aprender • Testar • Evoluir</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
